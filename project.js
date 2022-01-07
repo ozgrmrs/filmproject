@@ -12,6 +12,11 @@ const storage = new Storage();
 eventListeners()
 function eventListeners(){
     form.addEventListener("submit", addFilm);
+    document.addEventListener("DOMContentLoaded", function(){
+     let films = storage.getFilmsFromStorage();
+     ui.l
+  
+    })
 
 }
 function addFilm(e){
@@ -28,7 +33,7 @@ function addFilm(e){
         //Yeni film
         const newFilm= new Film (title, director, url);
         storage.addFilmToStorage(newFilm);  //storage film ekleme
-        
+
 
         ui.addFilmToUI(newFilm); //arayüze film ekleme
         ui.displayMessages("Film başarıyla eklendi.","success")
