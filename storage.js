@@ -16,5 +16,5 @@ Storage.prototype.getFilmsFromStorage = function(){
                 films = JSON.parse(localStorage.getItem("films"));
 
             }
-    returnfilms;
+    // returnfilms;
 }
